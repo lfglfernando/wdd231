@@ -161,7 +161,7 @@ span {
     color: var(--second-bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
-    transform: .5s ease;
+    transform: 0.5s ease;
 }
 
 .btn:hover {
@@ -180,7 +180,7 @@ span {
     color: var(--second-bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
-    transform: .5s ease;
+    transform: 0.5s ease;
 }
 
 .btn-classes:hover {
