@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ccc;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(0, 72, 255);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.prophet-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    text-align: center;
+    background-color: #f9f9f9; 
+}
+
+.prophet-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+
+.prophet-card p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: darkslategray;
+}
+
+.prophet-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+}
+
+
+@media (min-width: 37.5em) {
+    #cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 48em) {
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 64em) {
+    #cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #cards img {
+        border: none; /* Remove border when there are multiple columns */
+    }
+}
