@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer{
+    padding: 1rem ;
+    background: gray;
+    
+}
+
+header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+}
+
+footer {
+    padding: 2rem;
+    background-color: gray;
+}
+nav {
+    background-color: #154e13;
+}
+
+#myButton::before {
+    content: "\2630";
+}
+
+#myButton {
+    font-size: 2rem;
+    background:none ;
+    border: none;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: .25rem 2vw;
+}
+
+ul.menuLinks li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: #fff;
+    text-decoration: none;
+}
+
+li.current-menu-item a {
+    background-color: rgba(0,0,0,0.2);
+}
+
+ul.menuLinks {
+    list-style-type: none;
+}
+
+#myButton.open::before {
+    content: "\2715"
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+@media only screen and (min-width: 38rem) {
+    #myButton {
+        display: none;
+    }
+
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul.menuLinks a:hover {
+        background-color: rgba(255,255,255,0,2); 
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+}

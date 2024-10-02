@@ -1,0 +1,60 @@
+{
+    "companies": [
+      {
+        "name": "Crmbl Cookies",
+        "address": "154 W 1230 N St, Provo, UT 84604",
+        "phone_number": "+1(801)823-1544",
+        "website_url": "https://crumblcookies.com/provo",
+        "image": "images/crmbl.webp",
+        "membership_level": "member"
+      },
+      {
+        "name": "Desert First Credit Union",
+        "address": "695 E 800 N, Provo, UT 84606",
+        "phone_number": "+1(801)655-5689",
+        "website_url": "https://www.dfcu.com/about/dfcu/locations/provo/",
+        "image": "images/desertfirst.webp",
+        "membership_level": "silver"
+      },
+      {
+        "name": "AutoZone",
+        "address": "1475 N State St, Provo, UT 84604",
+        "phone_number": "+1(801)377-1021",
+        "website_url": "https://www.autozone.com",
+        "image": "images/autozone.webp",
+        "membership_level": "gold"
+      },
+      {
+        "name": "Squire",
+        "address": "1329 S 800 E, Orem, UT 84097",
+        "phone_number": "+1(801)225-6900",
+        "website_url": "https://www.squire.com/",
+        "image": "https://www.squire.com/wp-content/themes/squire-2019/images/svg/squirelogo.svg",
+        "membership_level": "member"
+      },
+      {
+        "name": "Rancho Market",
+        "address": "1700 N State St #12, Provo, UT 84604",
+        "phone_number": "+1(801)655-0700",
+        "website_url": "https://ranchomarkets.com/",
+        "image": "images/ranchomarket.webp",
+        "membership_level": "gold"
+      },
+      {
+        "name": "Berg Mortuary",
+        "address": "Berg Mortuary, 185 E Center St, Provo, UT 84606",
+        "phone_number": "+1(801)373-1841",
+        "website_url": "https://www.bergmortuary.com/",
+        "image": "images/bergmortuary.webp",
+        "membership_level": "silver"
+      },
+      {
+        "name": "Intermountain Health Care",
+        "address": "289 W 1230 N, Provo, UT 84604",
+        "phone_number": "+1(801)357-8250",
+        "website_url": "https://intermountainhealthcare.org/locations/utah-valley-hospital",
+        "image": "images/intermountain.webp",
+        "membership_level": "gold"
+      }
+    ]
+  }
