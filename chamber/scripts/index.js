@@ -14,6 +14,63 @@ document.getElementById("currentyear").textContent = year;
 const lastModified = document.lastModified;
 document.getElementById("lastModified").textContent = `Last Modification: ${lastModified}`;
 
+//end of header and footer
+
+//WEATHER FUNCTION
+const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=40.2338&lon=-111.6585&appid=76db66a39c66dda5bd0cfc4c27c55b39&units=imperial`;
+
+async function fetchWeather() {
+    try {
+        const response = await fetch(weatherUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+
+        // Acceder al clima actual desde la primera entrada de data.list
+        const currentWeather = data.list[0];
+        const iconCode = currentWeather.weather[0].icon;
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+        // Actualizar la temperatura y descripción actual
+        document.querySelector('#current-temp span').textContent = Math.round(currentWeather.main.temp);
+        document.querySelector('#current-desc span').textContent = currentWeather.weather[0].description.toUpperCase();
+
+        // Actualizar el ícono del clima
+        const iconElement = document.querySelector('.icon-weather');
+        iconElement.src = iconUrl;
+        iconElement.alt = currentWeather.weather[0].description;
+        iconElement.style.width = '50px';
+
+        // Crear pronóstico de 3 días (seleccionando las horas correspondientes)
+        const forecastElement = document.querySelector('#forecast');
+        forecastElement.innerHTML = '';
+
+        // Filtrar la lista para obtener datos de los próximos 3 días al mediodía (12:00 PM)
+        const middayForecasts = data.list.filter(forecast => 
+            new Date(forecast.dt * 1000).getHours() === 12
+        ).slice(0, 3); // Tomar solo los próximos 3 días
+
+        middayForecasts.forEach((day) => {
+            const dayName = new Date(day.dt * 1000).toLocaleDateString('en-US', { weekday: 'long' });
+            const temp = Math.round(day.main.temp);
+            const forecastItem = document.createElement('li');
+            forecastItem.textContent = `${dayName}: ${temp}°F`;
+            forecastElement.appendChild(forecastItem);
+        });
+              
+    } catch (error) {
+        console.error('Error fetching weather data', error);
+        document.querySelector('#weather-info').innerHTML = 'Unable to retrieve weather data.';
+    }
+}
+
+fetchWeather();
+
+
+//function for the spotlight membership
+
 const url = 'data/members.json';
 const cards = document.querySelector('#cards'); 
 
@@ -25,13 +82,24 @@ async function getBusinessData() {
         }
         const data = await response.json(); 
 
-        displayBusinesses(data.companies); 
+        const filteredCompanies = data.companies.filter(business =>
+            business.membership_level === 'Silver' || business.membership_level === 'Gold'
+            );
+
+        const randomCompanies = getRandomCompanies(filteredCompanies, 2);
+
+        displayBusinesses(randomCompanies); 
     } catch (error) {
         console.error("Error fetching the data:", error); 
     }
 }
 
 getBusinessData(); 
+
+function getRandomCompanies(companies, num) {
+    const shuffled = companies.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0,num);
+}
 
 const displayBusinesses = (companies) => {
     // card build code goes here
@@ -86,39 +154,3 @@ const displayBusinesses = (companies) => {
         cards.appendChild(card);
     }); // end of arrow function and forEach loop
 };
-
-// Selecciona los botones y el contenedor de las tarjetas
-const gridViewButton = document.getElementById('gridView');
-const listViewButton = document.getElementById('listView');
-const cardsContainer = document.getElementById('cards');
-
-// Función para cambiar a vista grid
-gridViewButton.addEventListener('click', () => {
-    cardsContainer.classList.add('grid-view');
-    cardsContainer.classList.remove('list-view');
-});
-
-// Función para cambiar a vista lista
-listViewButton.addEventListener('click', () => {
-    cardsContainer.classList.add('list-view');
-    cardsContainer.classList.remove('grid-view');
-});
-
-
-//WEATHER FUNCTION
-const apiKey = '6035437d49b0cb2e78cf84f41b662dd7';
-const cityId = '5780026';
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&appid=${apiKey}&units=metric`;
-
-async function fetchWeather() {
-    try {
-        const response = await fetch(weatherUrl);
-        const data = await response.json();
-        document.querySelector('#current-temp span').textContent = Math.round(data.main.temp);
-        document.querySelector('#current-desc span').textContent = data.weather.map(w => w.description.toUpperCase()).join(', ');
-    } catch (error) {
-        console.error('Error fetching weather data', error);
-    }
-}
-
-fetchWeather();

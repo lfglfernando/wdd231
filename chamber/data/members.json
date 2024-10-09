@@ -14,7 +14,7 @@
         "phone_number": "+1(801)655-5689",
         "website_url": "https://www.dfcu.com/about/dfcu/locations/provo/",
         "image": "images/desertfirst.webp",
-        "membership_level": "silver"
+        "membership_level": "Silver"
       },
       {
         "name": "AutoZone",
@@ -22,7 +22,7 @@
         "phone_number": "+1(801)377-1021",
         "website_url": "https://www.autozone.com",
         "image": "images/autozone.webp",
-        "membership_level": "gold"
+        "membership_level": "Gold"
       },
       {
         "name": "Squire",
@@ -38,7 +38,7 @@
         "phone_number": "+1(801)655-0700",
         "website_url": "https://ranchomarkets.com/",
         "image": "images/ranchomarket.webp",
-        "membership_level": "gold"
+        "membership_level": "Gold"
       },
       {
         "name": "Berg Mortuary",
@@ -46,7 +46,7 @@
         "phone_number": "+1(801)373-1841",
         "website_url": "https://www.bergmortuary.com/",
         "image": "images/bergmortuary.webp",
-        "membership_level": "silver"
+        "membership_level": "Silver"
       },
       {
         "name": "Intermountain Health Care",
@@ -54,7 +54,7 @@
         "phone_number": "+1(801)357-8250",
         "website_url": "https://intermountainhealthcare.org/locations/utah-valley-hospital",
         "image": "images/intermountain.webp",
-        "membership_level": "gold"
+        "membership_level": "Gold"
       }
     ]
   }
