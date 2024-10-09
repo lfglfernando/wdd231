@@ -124,7 +124,7 @@ header.sticky {
 
 h1 {
     font-size: 7em;
-    text-shadow: 2px, 2px 5px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 h2 {
@@ -132,7 +132,7 @@ h2 {
     font-size: 3rem;
     text-align: center;
     font-weight: 400;
-    text-shadow: 2px, 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 a {
