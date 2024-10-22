@@ -374,6 +374,27 @@ a {
     margin-top: 12rem;
 }
 
+.demographics a {
+    display: inline-block;
+    width: 50%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.3rem;
+    padding: 10px;
+    border-radius: 2rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s ease;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+a:hover {
+    box-shadow: 0 0 3rem var(--main-color);
+}
+
 #discover h2 {
     font-weight: 800;
     padding-bottom: 3rem;
