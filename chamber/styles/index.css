@@ -551,6 +551,9 @@ span {
         margin-bottom: 1rem;
     }
 
+    .image-gallery img:hover {
+        transform: none; /* Sin efecto de hover */
+    }
 
  }
 
