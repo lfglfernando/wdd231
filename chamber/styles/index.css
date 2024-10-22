@@ -440,7 +440,7 @@ span {
 .image-gallery img {
     width: 100%;
     height: auto;
-    transition: transform 0.3 ease-in-out;
+    transition: transform 0.3s ease-in-out;
     border-radius: 5rem;
     padding: 1.5rem;
 }
