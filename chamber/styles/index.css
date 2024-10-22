@@ -364,6 +364,93 @@ a {
   
 /* end home chamber of commerce */
 
+/* discover page  start*/
+
+#discover {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /*side bar and main content*/
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 12rem;
+}
+
+#discover h2 {
+    font-weight: 800;
+    padding-bottom: 3rem;
+}
+
+#discover p {
+    font-size: 1.8rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+#visitor-message {
+    font-size: 1.8rem;
+    color: var(--second-bg-color);
+    background-color: var(--main-color);
+    border-radius: 0.7rem;
+    padding-left: 0.6rem;
+    margin-bottom: 3rem;
+}
+
+.demographics {
+    margin-bottom: 6rem;
+}
+
+.demographics h2{
+    text-align: left;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+
+} 
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+.sidebar {
+    background-color: var(--second-bg-color);
+    padding: 2rem;
+}
+
+.main-content {
+    display:flex;
+    flex-direction: column;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3 ease-in-out;
+    border-radius: 5rem;
+    padding: 1.5rem;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); 
+}
+
+/* discover page end */
+
 /* footer */
 .footer {
     display: flex;
@@ -450,6 +537,18 @@ a {
 
     header, .section {
         max-width: 100%;
+    }
+
+    #discover {
+        grid-template-columns: 1fr;
+    }
+
+    #visitor-message {
+        padding: 1rem;
+        background: var(--main-color);
+        color: var(--bg-color);
+        border-radius: 5px;
+        margin-bottom: 1rem;
     }
 
 

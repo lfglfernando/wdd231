@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Chamber of Commerce of Provo Discover">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lfglfernando.github.io/wdd231/chamber/images/logo.PNG">
+    <meta property="og:url" content="https://lfglfernando.github.io/wdd231/chamber/discover.html">
+    <meta property="og:description" content="Chamber of Commerce Discover Page">
+    <meta name="author" content="Luis Fernando Galvez Lopez">
+    <meta name="description" content="Chamber Of Commerce">
+    <title>Chamber Of Commerce Discover</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/provofavicon.ico">
+
+    
+	<!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.rel='stylesheet'">
+
+
+     <!-- box icons -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/index.css">
+
+	<!-- custom js -->
+    <script src="scripts/discover.js" defer></script>
+
+</head>
+<body>
+    <!-- header design -->
+    <header>
+        <img src="images/provologo.webp" alt="Provo-Logo" class="logo">
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="#discover">Discover</a>
+            <a href="directory.html">Business Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+    <main>
+        <section id="discover">
+            <div class="sidebar">
+                <div id="visitor-message"></div> <!-- Will display the last visit message -->
+                <div class="demographics">
+                    <h2>Demographics & Statistics</h2>
+                    <p><span>Population:</span> 150,000</p>
+                    <p><span>Median Income:</span> $50,000</p>
+                    <p><span>Education Level:</span> 85% College Graduates</p>
+                </div>
+                <div class="demographics">
+                    <h2>Upcoming Events</h2>
+                    <h3><span>Business Networking</span></h3>
+                    <p>Join us for a night of networking and community building on October 20th, 2024.</p>
+                    <h3><span>Annual Conference</span></h3>
+                    <p>Mark your calendar for the annual business conference on November 10th, 2024.</p>
+                </div>
+                <div class="demographics">
+                    <h2>Membership Levels</h2>
+                    <p><span>Membership Level:</span> NP - Company</p>
+                    <p><span>Membership Level:</span> Bronze Membership</p>
+                    <p><span>Membership Level:</span> Silver Membership</p>
+                    <p><span>Membership Level:</span> Gold Membership</p><br>
+                    <a href="join.html"><button class="btn" >Join</button></a>
+                </div>
+                <div class="social-media demographics">
+                    <h2>Social Media</h2><br>
+                    <h3>Follow us:</h3>
+                    <a href="https://www.facebook.com/profile.php?id=100001590254103" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://x.com/lfglfernandog" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/lfglfernando/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="https://www.linkedin.com/in/lfernandog/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                </div>
+            </div>
+            <div class="main-content">
+                <h2>Explore the Area</h2>
+                <div class="image-gallery">
+                    <img src="images/photo1.webp" alt="Area Image 1" loading="lazy">
+                    <img src="images/photo2.webp" alt="Area Image 2" loading="lazy">
+                    <img src="images/photo3.webp" alt="Area Image 3" loading="lazy">
+                    <img src="images/photo4.webp" alt="Area Image 4" loading="lazy">
+                    <img src="images/photo5.webp" alt="Area Image 5" loading="lazy">
+                    <img src="images/photo6.webp" alt="Area Image 6" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- footer design -->
+     <footer class="footer">
+        <div class="footer-text">
+			<p> Luis Fernando Galvez, <i class="fas fa-flower"></i> Mexico</p>
+        	<p id="lastModified"></p>
+            <p>Copyright &copy; <span id="currentyear"></span> All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+     </footer>
+
+
+</body>
+</html>
