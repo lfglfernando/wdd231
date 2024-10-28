@@ -201,6 +201,10 @@ a {
     font-size: 1.5rem;
 }
 
+.temperature {
+    color: var(--second-bg-color);
+}
+
 
 #cards-weather {
     display: flex;
