@@ -1,0 +1,19 @@
+{
+    "companies": [
+      {
+        "name": "Mariage Proposal",
+        "website_url": "https://lfglfernando.github.io/wdd130/proposal/netflix.html",
+        "image": "images/marriage-proposal.png"
+      },
+      {
+        "name": "TOP 10 Book of Mormon",
+        "website_url": "https://lfglfernando.github.io/wdd131/week05/bom.html",
+        "image": "images/bomtop10.png"
+      },
+      {
+        "name": "Find Your Temple",
+        "website_url": "https://lfglfernando.github.io/wdd131/filtered-temples.html",
+        "image": "images/find-your-temple.png"
+      }
+    ]
+  }

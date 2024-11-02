@@ -1,0 +1,357 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #00eeff;   
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    margin-top: 6rem;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.logo {
+    cursor: default;
+    width: 10rem;
+    height: 10rem;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/* end of header */
+
+/* business directory part */
+
+section h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+/* Estilos generales de las tarjetas */
+
+#cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
+
+#cards .cards-box {
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border: var(--bg-color) 5px solid;
+    border-radius: 2rem;
+    text-align: center;
+    transition: .5s ease;
+    max-height: 62rem;
+}
+
+#cards .cards-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.cards-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cards-box a {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+
+.cards-box img {
+    width: 100%;
+    height: 30rem;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Vista en Grid */
+#cards.grid-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#cards.grid-view .cards-box {
+    flex: 1 1 30rem;
+    max-width: 30rem;
+}
+
+/* Vista en Lista */
+#cards.list-view {
+    display: block; /* Display block for list */
+    padding-bottom: 2rem;
+}
+
+#cards.list-view .cards-box {
+    display: flex; /* Flex layout to align image and content horizontally */
+    flex-direction: column; /* Horizontal row layout */
+    align-items: center; /* Center align content */
+    max-width: 100%; /* Full width in the list */
+    background: var(--bg-color);
+    padding: 1rem; /* Adjust padding */
+    margin-bottom: 3rem;
+    border: var(--bg-color) 5px solid;
+    border-radius: 2rem;
+    transition: .5s ease;
+    height: auto;
+}
+
+/* Style for image in list view */
+#cards.list-view .cards-box img {
+    width: 15rem; /* Smaller image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-right: 2rem; /* Spacing between image and content */
+}
+
+/* Adjust the content next to the image */
+#cards.list-view .cards-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Business info styles */
+#cards.list-view .business-info {
+    text-align: left;
+}
+
+#cards.list-view .business-info h2, 
+#cards.list-view .business-info p {
+    margin: 0;
+}
+
+/* Hover effect */
+#cards.list-view .cards-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+
+/* Botones de vista */
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.view-buttons button {
+    font-size: 2.3rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: 0.5s ease;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.view-buttons button.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.view-buttons button i {
+    pointer-events: none;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+ /* BREAKPOINTS */
+
+ @media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+ }
+
+ @media (max-width: 991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+
+    .footer {
+        padding: 2rem 3%;
+    }
+ }
+
+ @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    header, .section {
+        max-width: 100%;
+    }
+
+
+ }
+
+
+ @media (max-width: 450px) {
+    html {
+        font-size: 50%;
+
+    }
+
+ }
+
+ @media (max-width: 365px) {
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+ }

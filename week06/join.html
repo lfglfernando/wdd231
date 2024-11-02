@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Conctat Fernando Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lfglfernando.github.io/wdd231/week06/images/profile.PNG">
+    <meta property="og:url" content="https://lfglfernando.github.io/wdd231/week06/join.html">
+    <meta property="og:description" content="Fernando Portfolio Contact Info">
+    <meta name="author" content="Luis Fernando Galvez Lopez">
+    <meta name="description" content="Fernando Portfolio">
+    <title>Fernando Portfolio</title>
+    <!-- favicon -->
+    <link rel="icon" href="ferwebdev.ico">
+
+    
+	<!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.rel='stylesheet'">
+
+
+     <!-- box icons -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/join.css">
+
+	<!-- custom js -->
+    <script src="scripts/join.js" defer></script>
+
+</head>
+<body>
+    <!-- header design -->
+    <header>
+        <img src="images/profile.PNG" alt="portfolio-Logo" class="logo">
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="index.html">About</a>
+            <a href="directory.html">Portfolio</a>
+            <a href="#join">Contact</a>
+        </nav>
+    </header>
+    <main>
+    <h1 id="join">Contact Me</h1>
+
+    <div class="container">
+    <div>
+        <form method="GET" action="thankyou.html" class="designOne">
+        <h2>Form To Contact Fernando</h2>
+        <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label>Organizational Title <input type="text" name="organizational" autocomplete="organization-title" title="Your Organizational Title" pattern="[A-Za-z\s\-]{7,}"></label>
+            <label>Email Address <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+            <label>Phone Number <input type="tel" name="phone" required autocomplete="tel" title="Your Phone Number" placeholder="987-555-1234" ></label>
+            <label>Organization's Name <input type="text" name="organization-name" required autocomplete="organization" title="Organization's Name" ></label>
+            <label for="membership-level">Select a role you are hiring for</label>
+            <select id="membership-level" name="membership-level" required>
+                <option value="" disabled selected>Select a role you are hiring for</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Cloud Developer">Cloud Developer</option>
+                <option value="Full-Stack Developer">Full-Stack Developer</option>
+            </select>
+            <label for="business-description">Business/Organization Description</label>
+            <textarea id="business-description" name="business-description" 
+            title="Provide a brief description of your business or organization" 
+            placeholder="Enter a description of your business or organization" 
+            rows="5" cols="50" required></textarea>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="">
+            <input type="submit" value="Submit Form">
+        </form>
+    </div>
+    <div class="portfolio-container">
+        <h2>Specialities</h2>
+        <div class="portfolio-box">
+            <h4>Software Developer</h4>
+            <button class="btn">Learn More</button>
+        </div>
+
+        <div class="portfolio-box">
+            <h4>Web Developer</h4>
+            <button class="btn">Learn More</button>
+        </div>
+
+        <div class="portfolio-box">
+            <h4>Cloud Engineer</h4>
+            <button class="btn">Learn More</button>
+        </div>
+
+        <div class="portfolio-box">
+            <h4>Full-Stack Developer</h4>
+            <button class="btn">Learn More</button>
+        </div>
+    </div>
+
+    <dialog class="membership-details">
+
+    </dialog>
+    </div>
+
+    </main>
+    
+    <!-- footer design -->
+     <footer class="footer">
+        <div class="footer-text">
+			<p> Luis Fernando Galvez, <i class="fas fa-flower"></i> Mexico</p>
+        	<p id="lastModified"></p>
+            <p>Copyright &copy; <span id="currentyear"></span> All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#join"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+     </footer>
+     <!-- scroll reveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+</body>
+
+
+
+</html>
